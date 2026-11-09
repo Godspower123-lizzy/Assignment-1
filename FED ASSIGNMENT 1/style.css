@@ -1,0 +1,95 @@
+:root {
+  --navy: #16213e;
+  --gold: #e8b04a;
+  --cream: #f4f1ea;
+  --white: #ffffff;
+  --text: #1c1c28;
+  --space: 1rem;
+  --radius: 10px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, Arial, sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Navbar: Flexbox */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space);
+  padding: var(--space) 2rem;
+  background: var(--navy);
+}
+.logo { color: var(--gold); font-weight: 700; font-size: 1.3rem; text-decoration: none; }
+.nav-links { display: flex; gap: var(--space); list-style: none; margin: 0; padding: 0; }
+.nav-links a { color: var(--white); text-decoration: none; padding: 0.4rem 0.8rem; border-radius: 6px; }
+.nav-links a:hover { background: var(--gold); color: var(--navy); }
+.nav-links a:focus, .logo:focus { outline: 3px solid var(--gold); outline-offset: 2px; }
+
+/* Sections: Grid */
+.page-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 var(--space);
+}
+.card {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.card:hover { box-shadow: 0 6px 16px rgba(0,0,0,0.15); }
+h1, h2 { color: var(--navy); margin-top: 0; }
+img { max-width: 100%; height: auto; border-radius: var(--radius); }
+
+table { width: 100%; border-collapse: collapse; margin-top: var(--space); }
+th, td { border: 1px solid #ddd; padding: 0.6rem; text-align: left; }
+th { background: var(--navy); color: var(--white); }
+
+/* Form */
+form { display: flex; flex-direction: column; gap: 0.5rem; }
+input, select, textarea {
+  padding: 0.6rem;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  font: inherit;
+}
+input:focus, select:focus, textarea:focus, button:focus {
+  outline: 3px solid var(--gold);
+  border-color: var(--navy);
+}
+button {
+  padding: 0.7rem;
+  background: var(--navy);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  font: inherit;
+  cursor: pointer;
+}
+button:hover { background: var(--gold); color: var(--navy); }
+
+footer { text-align: center; padding: 1.5rem; background: var(--navy); color: var(--white); }
+
+/* Tablet */
+@media (min-width: 600px) {
+  .page-grid { grid-template-columns: 1fr 1fr; }
+  #contact { grid-column: span 2; }
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+  .page-grid { grid-template-columns: repeat(3, 1fr); }
+  #contact { grid-column: span 1; }
+}

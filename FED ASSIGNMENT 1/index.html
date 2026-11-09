@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Circuit Corner | EEE Student Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a class="logo" href="#home">Circuit Corner</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#components">Components</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page-grid">
+    <section id="about" class="card">
+      <h1 id="home">Welcome to Circuit Corner</h1>
+      <h2>About</h2>
+      <p>I am an Electrical and Electronics Engineering student who loves building and understanding circuits. This page shares the basic components I work with.</p>
+      <img src="images/photo.jpg" alt="A photo of me with an electrical student">
+    </section>
+
+    <section id="components" class="card">
+      <h2>Common Components</h2>
+      <ul>
+        <li>Resistor</li>
+        <li>Capacitor</li>
+        <li>Inductor</li>
+        <li>Diode</li>
+        <li>Transistor</li>
+      </ul>
+      <table>
+        <caption>Component quick reference</caption>
+        <thead>
+          <tr><th>Component</th><th>Unit</th><th>Job</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Resistor</td><td>Ohm (Ω)</td><td>Limits current</td></tr>
+          <tr><td>Capacitor</td><td>Farad (F)</td><td>Stores charge</td></tr>
+          <tr><td>Inductor</td><td>Henry (H)</td><td>Stores energy in a magnetic field</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <form action="#" method="post">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="topic">Topic</label>
+        <select id="topic" name="topic">
+          <option>Collaboration</option>
+          <option>Question</option>
+          <option>Feedback</option>
+        </select>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Circuit Corner. Built for FEDS Academy.</p>
+  </footer>
+</body>
+</html>
